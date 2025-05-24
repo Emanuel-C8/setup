@@ -1,0 +1,5 @@
+echo "y or n"
+read ans
+if [ "$ans" == "y" ]; then
+echo "SIIIIIUUUUUUUUMMMMMMMM"
+fi

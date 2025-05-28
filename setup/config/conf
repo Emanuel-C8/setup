@@ -1,0 +1,6 @@
+InsertConfigurations()
+{
+#Tmux Configuration
+	cp tmux.conf .tmux.conf
+	mv .tmux.conf ~/
+}

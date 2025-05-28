@@ -1,0 +1,35 @@
+install_Packages(){
+# X11 Dependencies
+sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xsetroot
+sudo pacman -S libx11 libxft libxinerama
+# Dwm
+read -p "Do u need a Windows Manager (DWM)?" ans
+if [ "$ans" == "y" ]; then
+echo 'Sium. letsgo'
+mkdir ~/suckless && cd ~/suckless
+git clone https://git.suckless.org/dwm && git clone https://git.suckless.org/dmenu && git clone https://git.suckless.org/st
+cd dwm && sudo make clean install
+cd - && cd dmenu && sudo make clean install
+cd - && cd st && sudo make clean install && echo 'exec dwm' > ~/xinitrc
+fi
+# Termux Multiplexer
+sudo pacman -S --noconfirm tmux
+# File Managers
+sudo pacman -S --noconfirm nnn
+# Power Management 
+sudo pacman -S --noconfirm tlp
+# Task Managers
+sudo pacman -S --noconfirm htop
+# Office 365 Equivalent (Word, Excel, PowerPoint)
+sudo pacman -S --noconfirm pandoc sc-im mdp
+# Email Clients
+sudo pacman -S --noconfirm neomutt aerc
+# Text Editors
+sudo pacman -S --noconfirm vim neovim
+# Video and Audio usage (tmux friendly)
+sudo pacman -S --noconfirm mpv cmus mpd ncmpcpp alsa-utils sox ffmpeg yt-dlp fbida kid3 perl-image-exiftool
+# Extraction/Compression
+sudo pacman -S --noconfirm unzip unrar p7zip tar gzip bzip2 xz lrzip lzip zstd gzip bzip2 xz zip
+# Wireless Connections... Don't worry, it won't run on startup by default...
+sudo pacman -S --noconfirm networkmanager
+}

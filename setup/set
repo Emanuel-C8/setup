@@ -1,5 +1,5 @@
 source Packages
-source config
+source config/conf
 
 install_Packages
 InsertConfigurations

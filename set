@@ -1,0 +1,5 @@
+source Packages
+
+install_Packages
+sudo cp tmux.conf ~/.tmux.conf
+

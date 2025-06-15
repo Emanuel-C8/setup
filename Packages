@@ -96,4 +96,5 @@ EOF
 
   # Wireless Connections (won't start by default)
   sudo pacman -S --noconfirm networkmanager
+  # If you ever need MATLAB, use these dependencies: gtk2 jre-openjdk libxft libxext libxmu libxp libxrandr
 }

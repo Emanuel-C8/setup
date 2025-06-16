@@ -81,7 +81,7 @@ EOF
 
   # Office 365 Equivalent (Word, Excel, PowerPoint)
   sudo pacman -S --noconfirm texlive-basic texlive-bin texlive-formatsextra texlive-latexextra gpoppler ghostscript pandoc mdp
-
+  sudo fmtutil-sys --all
   # Email Clients
   sudo pacman -S --noconfirm neomutt aerc
 

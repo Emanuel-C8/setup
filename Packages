@@ -80,7 +80,7 @@ EOF
   sudo pacman -S --noconfirm htop
 
   # Office 365 Equivalent (Word, Excel, PowerPoint)
-  sudo pacman -S --noconfirm pandoc sc-im mdp
+  sudo pacman -S --noconfirm texlive-basic texlive-binextra poppler ghostscript pandoc sc-im mdp
 
   # Email Clients
   sudo pacman -S --noconfirm neomutt aerc
